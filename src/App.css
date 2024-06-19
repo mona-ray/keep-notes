@@ -1,0 +1,122 @@
+body {
+  background-color: #ddd; 
+  margin: 0; 
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  text-align: center;
+  padding: 20px; 
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app .add-button {
+  border: none;
+  background-color: transparent;
+  font-size: 60px;
+  color: green;
+}
+
+.title h1 {
+  text-align: left;
+  color: white;
+  margin-top: 20px;
+  font-size: 50px;
+}
+
+.notes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.note {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  width: 30%;
+  cursor: pointer;
+}
+
+.note-editor {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+ 
+  padding: 10px 0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.pagination li a {
+  font-size: 25px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border: none;
+  color: white;
+  text-decoration: none; 
+}
+
+.pagination li.active a {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.pagination li a:hover {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+
+@media (max-width: 768px) {
+  .note {
+    width: 100%; 
+  }
+  
+  .footer {
+    width: 100%;
+    padding: 10px;
+  }
+}

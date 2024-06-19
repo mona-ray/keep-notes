@@ -1,0 +1,98 @@
+/* src/components/Styling/NoteEditor.css */
+
+.note-editor {
+    position: relative;         /* Position relative for the close button */
+    background-color: #f7f2f2;  /* Light grey background */
+    border-radius: 4px;         /* Slightly rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+    padding: 20px;              /* Inner padding */
+    width: 350px;
+    max-width: 100%;            /* Ensure it doesn't overflow on smaller screens */
+    height: auto;               /* Auto height */
+    margin: 20px auto;          /* Centered horizontally */
+    border: 1px solid #ddd;     /* Light border */
+  }
+  
+  #closeButton {
+    position: absolute;         /* Absolute positioning */
+    top: 10px;                  /* 10px from the top */
+    right: 10px;                /* 10px from the right */
+    background-color: transparent; /* Transparent background */
+    color: black;               /* Black text */
+    border: none;               /* No border */
+    border-radius: 50%;         /* Circular shape */
+    width: 30px;                /* Width */
+    height: 30px;               /* Height */
+    font-size: 20px;            /* Font size */
+    cursor: pointer;            /* Pointer cursor */
+    display: flex;              /* Flexbox for centering */
+    align-items: center;        /* Center items vertically */
+    justify-content: center;    /* Center items horizontally */
+  }
+  
+  #closeButton:hover {
+    color: #e53935;             /* Darker red on hover */
+  }
+  
+  .note-editor form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .note-editor input[type="text"] {
+    width: 100%;                /* Full width */
+    padding: 10px;
+    margin-top: 15px;           /* Inner padding */
+    margin-bottom: 10px;        /* Space between inputs */
+    border: 1px solid #ccc;     /* Light border */
+    border-radius: 4px;         /* Slightly rounded corners */
+    font-size: 16px;            /* Font size */
+  }
+  
+  .note-editor textarea {
+    width: 100%;                /* Full width */
+    padding: 10px;
+    margin-top: 3px;            /* Inner padding */
+    margin-bottom: 10px;        /* Space between inputs */
+    border: 1px solid #ccc;     /* Light border */
+    border-radius: 4px;         /* Slightly rounded corners */
+    font-size: 16px;            /* Font size */
+    height: 150px;              /* Fixed height for textarea */
+    resize: vertical;           /* Allow vertical resizing */
+  }
+  
+  .note-editor input[type="text"]::placeholder,
+  .note-editor textarea::placeholder {
+    color: #aaa;                /* Placeholder color */
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;    /* Center the save button */
+    margin-top: 10px;           /* Space above button */
+  }
+  
+  .button-container button {
+    background-color: #4CAF50;  /* Green background */
+    color: white;               /* White text */
+    border: none;               /* No border */
+    border-radius: 4px;         /* Rounded corners */
+    padding: 10px 20px;         /* Padding */
+    font-size: 16px;            /* Font size */
+    cursor: pointer;            /* Pointer cursor */
+    transition: background-color 0.3s; /* Transition for hover */
+  }
+  
+  .button-container button:hover {
+    background-color: #45a049;  /* Darker green on hover */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .note-editor {
+      width: 90%;               /* Adjust width for smaller screens */
+      max-width: 90%;           /* Ensure it doesn't overflow */
+      padding: 10px;             /* Smaller padding */
+    }
+  }
+  
